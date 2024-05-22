@@ -1,0 +1,18 @@
+name: create_site
+label: Create Site
+params:
+  - name: firstname
+    type: TEXT
+    required: false
+  - name: lastname
+    type: TEXT
+    required: false
+  - name: email
+    type: TEXT
+    required: false
+  - name: company
+    type: TEXT
+    required: false
+  - name: subdomain
+    type: TEXT
+    required: false

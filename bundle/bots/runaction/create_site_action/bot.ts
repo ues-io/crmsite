@@ -1,8 +1,7 @@
 import { RunActionBotApi } from "@uesio/bots"
-import { Params } from "@uesio/app/bots/runaction/uesio/crmsite/create_site_action"
 
 export default function create_site_action(bot: RunActionBotApi) {
-	const params = bot.params.getAll() as Params
+	const params = bot.params.getAll()
 	const actionName = bot.getActionName()
 
 	bot.log.info("Name", actionName)

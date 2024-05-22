@@ -13,14 +13,3 @@ declare module "@uesio/app/bots/listener/uesio/crmsite/create_site" {
 		Params
 	}
 }
-declare module "@uesio/app/bots/runaction/uesio/crmsite/create_site_action" {
-
-	type Params = {
-		amount: number
-		itemNumbers: string[]
-	}
-
-	export type {
-		Params
-	}
-}
