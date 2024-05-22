@@ -13,7 +13,7 @@ export default function create_site(bot: ListenerBotApi) {
 	bot.log.info("company", company)
 	bot.log.info("subdomain", subdomain)
 
-	//bot.runIntegrationAction("uesio/crmsite.")
+	bot.runIntegrationAction("uesio/crmsite.studio", "blah", {})
 
 	// Create a lead in our CRM App
 

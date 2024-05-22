@@ -1,20 +1,19 @@
 import { RunActionBotApi } from "@uesio/bots"
 import { Params } from "@uesio/app/bots/runaction/uesio/crmsite/create_site_action"
 
-type OrderDetails = {
-	orderNumber: string
-}
-
 export default function create_site_action(bot: RunActionBotApi) {
-    const params = bot.params.getAll() as Params
-    const { amount, itemNumbers } = params
+	const params = bot.params.getAll() as Params
 	const actionName = bot.getActionName()
+
+	bot.log.info("Name", actionName)
+	bot.log.info("PARAMS", params)
 
 	if (actionName !== "createOrder") {
 		bot.addError("unsupported action name: " + actionName)
 		return
 	}
 
+	/*
 	// Call API to create order
 	const result = bot.http.request({
 		method: "POST",
@@ -32,4 +31,5 @@ export default function create_site_action(bot: RunActionBotApi) {
 	const { orderNumber } = orderDetails
 
     bot.addResult("orderNumber", orderNumber)
+	*/
 }

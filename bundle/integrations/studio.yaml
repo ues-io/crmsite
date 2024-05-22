@@ -1,0 +1,4 @@
+name: studio
+type: studio
+authentication: API_KEY
+credentials: studio
