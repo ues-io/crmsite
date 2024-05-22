@@ -1,6 +1,5 @@
 name: primary_nofill
 label: Primary No Fill
-public: true
 extends: uesio/crmsite.primary
 definition:
   uesio.styleTokens:

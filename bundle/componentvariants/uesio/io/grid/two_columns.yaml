@@ -1,6 +1,5 @@
 name: two_columns
 label: Two Column Responsive
-public: true
 extends: uesio/io.two_columns
 definition:
   uesio.styleTokens:

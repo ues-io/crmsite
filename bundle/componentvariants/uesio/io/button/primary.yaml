@@ -1,6 +1,5 @@
 name: primary
 label: Primary
-public: true
 extends: uesio/crmsite.secondary
 definition:
   uesio.styleTokens:

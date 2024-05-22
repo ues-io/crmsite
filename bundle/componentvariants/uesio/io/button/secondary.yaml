@@ -1,6 +1,5 @@
 name: secondary
 label: Secondary
-public: true
 extends: uesio/io.secondary
 definition:
   uesio.styleTokens:

@@ -5,4 +5,3 @@ definition:
   wrapperVariant: uesio/crmsite.form
 variants:
   - uesio/io.fieldwrapper:uesio/crmsite.form
-public: true
