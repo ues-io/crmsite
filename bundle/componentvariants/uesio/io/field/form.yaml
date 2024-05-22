@@ -1,0 +1,8 @@
+name: form
+label: Form
+extends: uesio/io.default
+definition:
+  wrapperVariant: uesio/crmsite.form
+variants:
+  - uesio/io.fieldwrapper:uesio/crmsite.form
+public: true

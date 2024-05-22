@@ -1,0 +1,247 @@
+name: home
+definition:
+  # Wires connect to data in collections
+  wires:
+  # Components determine the layout and composition of your view
+  components:
+    - uesio/io.box:
+        uesio.styleTokens:
+          root:
+            - from-indigo-700
+            - to-violet-600
+            - bg-gradient-to-br
+            - "[min-height:100vh]"
+        components:
+          - uesio/io.box:
+              uesio.styleTokens:
+                root:
+                  - p-8
+                  - px-36
+                  - sticky
+                  - top-0
+                  - z-10
+                  - from-indigo-700/95
+                  - to-violet-600/95
+                  - bg-gradient-to-br
+                  - "[background-size:100%_500%]"
+                  - backdrop-blur
+              components:
+                - uesio/io.group:
+                    uesio.styleTokens:
+                      root:
+                        - grid
+                        - justify-between
+                    components:
+                      - uesio/io.group:
+                          components:
+                            - uesio/io.image:
+                                file: uesio/core.logowhite
+                                height: 44
+                      - uesio/io.group:
+                          uesio.styleTokens:
+                            root:
+                              - gap-8
+                          components:
+                            - uesio/io.group:
+                                components:
+                                  - uesio/io.button:
+                                      uesio.variant: uesio/crmsite.secondary
+                                      text: Pricing
+                                  - uesio/io.button:
+                                      uesio.variant: uesio/crmsite.secondary
+                                      text: Docs
+                                  - uesio/io.button:
+                                      uesio.variant: uesio/crmsite.secondary
+                                      text: Platform
+                            - uesio/io.button:
+                                uesio.variant: uesio/crmsite.primary
+                                text: Get Started
+                                signals:
+                                  - signal: route/NAVIGATE
+                                    path: getstarted
+          - uesio/io.box:
+              uesio.styleTokens:
+                root:
+                  - pt-[10vw]
+                  - pb-48
+                  - grid
+                  - md:grid-cols-2
+                  - grid-cols-1
+                  - overflow-hidden
+              components:
+                - uesio/io.box:
+                    uesio.styleTokens:
+                      root:
+                        - md:ml-36
+                        - ml-12
+                        - grid
+                        - items-center
+                        - justify-center
+                    components:
+                      - uesio/io.box:
+                          components:
+                            - uesio/io.text:
+                                uesio.styleTokens:
+                                  root:
+                                    - text-[5.5vw]
+                                    - text-white
+                                    - font-bold
+                                    - leading-tight
+                                    - md:leading-tight
+                                    - tracking-wide
+                                text: Refreshingly Simple CRM.
+                                element: div
+                            - uesio/io.text:
+                                uesio.styleTokens:
+                                  root:
+                                    - mt-[4vw]
+                                    - text-[1.4vw]
+                                    - text-white
+                                    - leading-tight
+                                    - md:leading-tight
+                                    - tracking-wide
+                                    - font-light
+                                text:
+                                element: div
+                            - uesio/io.button:
+                                uesio.variant: uesio/crmsite.primary_nofill
+                                text: Get Started for Free
+                                signals:
+                                  - signal: route/NAVIGATE
+                                    path: getstarted
+                - uesio/io.box:
+                    uesio.styleTokens:
+                      root:
+                        - grid
+                        - items-center
+                        - justify-center
+                    components:
+                      - uesio/io.image:
+                          file: uesio/crmsite.mockup_leads
+                          uesio.styleTokens:
+                            root:
+                              - scale-[1.9]
+                              - translate-x-1/4
+    - uesio/io.box:
+        uesio.styleTokens:
+          root:
+            - p-36
+        components:
+          - uesio/io.text:
+              uesio.styleTokens:
+                root:
+                  - text-violet-600
+                  - uppercase
+                  - tracking-wider
+                  - text-sm
+                  - mb-8
+              text: Why ues.io CRM?
+              element: div
+          - uesio/io.text:
+              uesio.styleTokens:
+                root:
+                  - text-5xl
+                  - text-slate-800
+                  - font-bold
+                  - leading-tight
+                  - "[text-wrap:balance]"
+              text: Straightforward CRM. Backed by the powerful ues.io plaform.
+              element: div
+    - uesio/io.box:
+        uesio.styleTokens:
+          root:
+            - grid
+            - grid-cols-2
+            - overflow-hidden
+        components:
+          - uesio/io.box:
+              uesio.styleTokens:
+                root:
+                  - bg-slate-100
+                  - p-36
+              components:
+                - uesio/io.text:
+                    uesio.styleTokens:
+                      root:
+                        - text-slate-400
+                        - uppercase
+                        - tracking-wider
+                        - text-sm
+                        - mb-8
+                        - font-light
+                    text: Prospecting
+                    element: div
+                - uesio/io.text:
+                    uesio.styleTokens:
+                      root:
+                        - text-5xl
+                        - text-slate-800
+                        - "[text-wrap:balance]"
+                        - leading-tight
+                        - font-bold
+                    text: Qualify and deduplicate leads.
+          - uesio/io.box:
+              uesio.styleTokens:
+                root:
+                  - bg-slate-50
+                  - p-36
+                  - py-[16vw]
+              components:
+                - uesio/io.image:
+                    file: uesio/crmsite.mockup_lead_convert
+                    uesio.styleTokens:
+                      root:
+                        - scale-[2.5]
+                        - translate-x-1/4
+    - uesio/io.box:
+        uesio.styleTokens:
+          root:
+            - grid
+            - grid-cols-2
+            - overflow-hidden
+        components:
+          - uesio/io.box:
+              uesio.styleTokens:
+                root:
+                  - bg-sky-200
+                  - p-36
+                  - py-[16vw]
+              components:
+                - uesio/io.image:
+                    file: uesio/crmsite.mockup_opp_details
+                    uesio.styleTokens:
+                      root:
+                        - scale-[2.5]
+                        - -translate-x-1/4
+          - uesio/io.box:
+              uesio.styleTokens:
+                root:
+                  - bg-sky-300
+                  - p-36
+              components:
+                - uesio/io.text:
+                    uesio.styleTokens:
+                      root:
+                        - text-sky-500
+                        - uppercase
+                        - tracking-wider
+                        - text-sm
+                        - mb-8
+                        - font-light
+                    text: Opportunities
+                    element: div
+                - uesio/io.text:
+                    uesio.styleTokens:
+                      root:
+                        - text-5xl
+                        - text-slate-800
+                        - "[text-wrap:balance]"
+                        - leading-tight
+                        - font-bold
+                    text: Track deals from start to closed.
+    - uesio/io.box:
+        uesio.styleTokens:
+          root:
+            - bg-slate-900
+            - "[min-height:300px]"
+        components:
