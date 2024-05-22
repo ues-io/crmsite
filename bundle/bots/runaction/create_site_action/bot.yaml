@@ -1,0 +1,20 @@
+name: create_site_action
+public: true
+type: RUNACTION
+dialect: TYPESCRIPT
+params:
+  - name: firstname
+    type: TEXT
+    required: true
+  - name: lastname
+    type: TEXT
+    required: true
+  - name: email
+    type: TEXT
+    required: true
+  - name: company
+    type: TEXT
+    required: true
+  - name: subdomain
+    type: TEXT
+    required: true
