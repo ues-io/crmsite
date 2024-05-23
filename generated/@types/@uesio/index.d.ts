@@ -591,6 +591,7 @@ type SaveResponseBatch = {
 export type {
 	AfterSaveBotApi,
 	BeforeSaveBotApi,
+	BotHttpResponse,
 	BotParamsApi,
 	ChangeApi,
 	ConditionOperator,
