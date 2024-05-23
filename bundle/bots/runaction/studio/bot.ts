@@ -1,5 +1,4 @@
-import { RunActionBotApi } from "@uesio/bots"
-import { wires } from "@uesio/ui"
+import { RunActionBotApi, SaveResponseBatch } from "@uesio/bots"
 
 export default function studio(bot: RunActionBotApi) {
 	//const params = bot.params.getAll()
@@ -10,14 +9,11 @@ export default function studio(bot: RunActionBotApi) {
 		return
 	}
 
-	const firstname = bot.params.get("firstname") as string
-	const lastname = bot.params.get("lastname") as string
+	//const firstname = bot.params.get("firstname") as string
+	//const lastname = bot.params.get("lastname") as string
 	//const email = bot.params.get("email") as string
 	//const company = bot.params.get("company") as string
 	const subdomain = bot.params.get("subdomain") as string
-
-	const sitename =
-		"selfsignup_" + firstname + "_" + lastname + "_" + subdomain
 
 	const creds = bot.getCredentials()
 	const apiKey = creds.apikey
@@ -34,8 +30,25 @@ export default function studio(bot: RunActionBotApi) {
 		bot.addError("Not studio URL provided")
 	}
 
+	const handleRequestError = (result: SaveResponseBatch) => {
+		if (result.code !== 200) {
+			bot.addError(
+				"Error Making Request: " + result.status + " " + result.body
+			)
+			return
+		}
+		const body = result.body as SaveResponseBatch
+		if (body.wires.length !== 1) {
+			bot.addError("Error Making Request: Invalid Response")
+		}
+		const wireResult = body.wires[0]
+		if (wireResult.errors?.length) {
+			bot.addError("Error Creating Site: " + wireResult.errors[0].message)
+		}
+	}
+
 	// Create a new site and get its id
-	const result = bot.http.request({
+	const result = bot.http.request<unknown, SaveResponseBatch>({
 		method: "POST",
 		url: url + "/site/wires/save",
 		body: {
@@ -45,7 +58,7 @@ export default function studio(bot: RunActionBotApi) {
 					wire: "createsite",
 					changes: {
 						"0": {
-							"uesio/studio.name": sitename,
+							"uesio/studio.name": subdomain,
 							"uesio/studio.bundle": {
 								"uesio/core.uniquekey": "uesio/crm:0:0:1",
 							},
@@ -58,13 +71,4 @@ export default function studio(bot: RunActionBotApi) {
 			],
 		},
 	})
-	if (result.code !== 200) {
-		bot.log.info("auth", "Bearer " + apiKey)
-		bot.log.info("Errrrrrr", result.body)
-		bot.addError("error: " + result.status)
-		return
-	}
-	const body = result.body as wires.SaveResponseBatch
-
-	bot.log.info("GOT SOMETIBG BLACK", result.body)
 }
