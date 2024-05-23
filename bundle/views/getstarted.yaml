@@ -33,21 +33,6 @@ definition:
         - field: success
           valueSource: VALUE
           value: false
-        - field: firstname
-          valueSource: VALUE
-          value: Ben
-        - field: lastname
-          valueSource: VALUE
-          value: Hubbard
-        - field: email
-          valueSource: VALUE
-          value: plusplusben@gmail.com
-        - field: company
-          valueSource: VALUE
-          value: "ues.io"
-        - field: subdomain
-          valueSource: VALUE
-          value: "uesio"
       init:
         create: true
         query: false
