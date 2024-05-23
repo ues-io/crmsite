@@ -7,12 +7,6 @@ export default function create_site(bot: ListenerBotApi) {
 	const company = bot.params.get("company") as string
 	const subdomain = bot.params.get("subdomain") as string
 
-	bot.log.info("firstname", firstname)
-	bot.log.info("lastname", lastname)
-	bot.log.info("email", email)
-	bot.log.info("company", company)
-	bot.log.info("subdomain", subdomain)
-
 	bot.runIntegrationAction("uesio/crmsite.studio", "create_site", {
 		firstname,
 		lastname,
