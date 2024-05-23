@@ -26,7 +26,13 @@ export default function studio(bot: RunActionBotApi) {
 	const url = bot.getConfigValue("uesio/crmsite.studio_url")
 
 	if (!url) {
-		bot.addError("Not studio URL provided")
+		bot.addError("No studio URL provided")
+	}
+
+	const version = bot.getConfigValue("uesio/crmsite.create_site_version")
+
+	if (!version) {
+		bot.addError("No create site version provided")
 	}
 
 	// Create a new site and get its id
@@ -39,7 +45,7 @@ export default function studio(bot: RunActionBotApi) {
 			email,
 			subdomain: subdomain + "-crm",
 			site: subdomain,
-			version: "v0.0.1",
+			version,
 			app: "uesio/crm",
 			profile: "uesio/crm.admin",
 			username: firstname,
