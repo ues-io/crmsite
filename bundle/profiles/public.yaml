@@ -1,0 +1,4 @@
+name: public
+permissionSets:
+  - uesio/crmsite.public
+  - uesio/core.public

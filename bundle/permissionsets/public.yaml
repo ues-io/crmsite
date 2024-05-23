@@ -1,0 +1,24 @@
+name: public
+named: {}
+views:
+  uesio/crmsite.getstarted: true
+  uesio/crmsite.home: true
+collections: {}
+routes:
+  uesio/crmsite.getstarted: true
+  uesio/crmsite.home: true
+files: {}
+bots:
+  uesio/crmsite.create_site: true
+integrationActions:
+  uesio/crmsite.studio:
+    allowAllActions: true
+    actions: {}
+allowallbots: false
+allowallcollections: false
+allowallviews: false
+allowallroutes: false
+allowallfiles: true
+allowallintegrationactions: false
+modifyallrecords: false
+viewallrecords: false

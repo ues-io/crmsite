@@ -1,4 +1,6 @@
 name: uesio/crmsite
+homeRoute: uesio/crmsite.home
+publicProfile: uesio/crmsite.public
 dependencies:
   uesio/builder:
     version: v0.0.1
