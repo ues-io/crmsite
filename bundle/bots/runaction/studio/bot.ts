@@ -49,6 +49,7 @@ export default function studio(bot: RunActionBotApi) {
 			app: "uesio/crm",
 			profile: "uesio/crm.admin",
 			username: firstname,
+			signupmethod: "uesio/crm.admin",
 		},
 	})
 
