@@ -3,10 +3,13 @@ named: {}
 views:
   uesio/crmsite.getstarted: true
   uesio/crmsite.home: true
+  uesio/crmsite.header: true
+  uesio/crmsite.footer: true
 collections: {}
 routes:
   uesio/crmsite.getstarted: true
   uesio/crmsite.home: true
+  uesio/crmsite.pricing: true
 files: {}
 bots:
   uesio/crmsite.create_site: true

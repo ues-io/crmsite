@@ -1,0 +1,100 @@
+name: splithero
+category: LAYOUT
+type: DECLARATIVE
+slots:
+  - name: left
+  - name: right
+definition:
+  - uesio/io.box:
+      uesio.styleTokens:
+        root:
+          - bg-$Prop{rightBackground}
+      components:
+        - uesio/io.box:
+            uesio.variant: uesio/crmsite.section
+            components:
+              - uesio/io.box:
+                  uesio.styleTokens:
+                    root:
+                      - grid
+                      - md:grid-cols-2
+                      - grid-cols-1
+                  components:
+                    - uesio/io.box:
+                        uesio.display:
+                          - type: hasValue
+                            value: $Prop{swap}
+                        uesio.styleTokens:
+                          root:
+                            - md:bg-$Prop{leftBackground}
+                            - md:relative
+                            - md:before:absolute
+                            - md:before:w-[2000px]
+                            - md:before:bg-$Prop{leftBackground}
+                            - md:before:inset-0
+                            - md:before:-z-10
+                            - md:order-last
+                            - grid
+                        components:
+                          - uesio/core.slot:
+                              name: left
+                    - uesio/io.box:
+                        uesio.display:
+                          - type: hasNoValue
+                            value: $Prop{swap}
+                        uesio.styleTokens:
+                          root:
+                            - md:bg-$Prop{leftBackground}
+                            - md:relative
+                            - md:before:absolute
+                            - md:before:w-[2000px]
+                            - md:before:bg-$Prop{leftBackground}
+                            - md:before:inset-0
+                            - md:before:-translate-x-full
+                            - md:before:-z-10
+                            - grid
+                        components:
+                          - uesio/core.slot:
+                              name: left
+                    - uesio/io.box:
+                        uesio.display:
+                          - type: hasValue
+                            value: $Prop{swap}
+                        uesio.styleTokens:
+                          root:
+                            - md:bg-$Prop{rightBackground}
+                            - md:relative
+                            - md:before:absolute
+                            - md:before:w-[2000px]
+                            - md:before:bg-$Prop{rightBackground}
+                            - md:before:inset-0
+                            - md:before:-translate-x-full
+                            - md:before:-z-10
+                            - grid
+                        components:
+                          - uesio/core.slot:
+                              name: right
+                    - uesio/io.box:
+                        uesio.display:
+                          - type: hasNoValue
+                            value: $Prop{swap}
+                        uesio.styleTokens:
+                          root:
+                            - md:bg-$Prop{rightBackground}
+                            - md:relative
+                            - md:before:absolute
+                            - md:before:w-[2000px]
+                            - md:before:bg-$Prop{rightBackground}
+                            - md:before:inset-0
+                            - md:before:-z-10
+                            - grid
+                        components:
+                          - uesio/core.slot:
+                              name: right
+title: Split Hero Component
+discoverable: true
+description: An split hero component
+sections:
+  - type: HOME
+    properties:
+  - type: DISPLAY

@@ -1,0 +1,13 @@
+name: halfhero
+label: Half Hero
+definition:
+  uesio.styleTokens:
+    root:
+      - lg:text-[4cqw]
+      - text-3xl
+      - text-slate-800
+      - font-bold
+      - leading-snug
+      - md:leading-tight
+      - "[text-wrap:balance]"
+  element: div

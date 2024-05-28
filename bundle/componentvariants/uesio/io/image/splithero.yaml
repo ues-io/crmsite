@@ -1,0 +1,16 @@
+name: splithero
+label: Split Hero
+definition:
+  uesio.styleTokens:
+    root:
+      - md:mt-[16cqw]
+      - md:mb-[16cqw]
+      - sm:mt-6
+      - sm:mb-30
+      - mt-2
+      - mb-24
+      - scale-[1.5]
+      - sm:scale-[1.8]
+      - md:scale-[2.2]
+      - "[max-height:350px]"
+      - justify-self-center

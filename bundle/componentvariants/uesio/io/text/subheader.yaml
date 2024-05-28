@@ -1,0 +1,12 @@
+name: subheader
+label: Sub Header
+definition:
+  uesio.styleTokens:
+    root:
+      - uppercase
+      - tracking-wider
+      - text-sm
+      - mb-6
+      - text-slate-400
+      - font-light
+  element: div

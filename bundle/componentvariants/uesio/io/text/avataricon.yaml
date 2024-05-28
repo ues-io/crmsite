@@ -1,0 +1,13 @@
+name: avataricon
+label: Avatar Icon
+public: true
+extends: uesio/io.icon
+definition:
+  uesio.styleTokens:
+    root:
+      - text-3xl
+      - text-green-700
+      - grid
+      - items-center
+      - justify-center
+      - m-auto

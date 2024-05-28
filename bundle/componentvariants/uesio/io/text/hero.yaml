@@ -1,0 +1,13 @@
+name: hero
+label: Hero
+definition:
+  uesio.styleTokens:
+    root:
+      - md:text-[4.5cqw]
+      - text-3xl
+      - text-slate-700
+      - font-bold
+      - leading-snug
+      - md:leading-tight
+      - "[text-wrap:balance]"
+  element: div

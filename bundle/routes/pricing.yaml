@@ -1,0 +1,5 @@
+name: pricing
+path: pricing
+view: pricing
+theme: uesio/core.default
+title: Pricing

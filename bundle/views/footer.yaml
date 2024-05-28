@@ -1,0 +1,12 @@
+name: footer
+definition:
+  # Wires connect to data in collections
+  wires:
+  # Components determine the layout and composition of your view
+  components:
+    - uesio/io.box:
+        uesio.styleTokens:
+          root:
+            - bg-slate-900
+            - "[min-height:300px]"
+        components:

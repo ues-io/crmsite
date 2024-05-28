@@ -1,0 +1,13 @@
+name: pricingitem
+label: Item
+public: true
+extends: uesio/io.default
+definition:
+  uesio.styleTokens:
+    root:
+      - my-4
+      - gap-4
+      - text-slate-700
+      - rounded
+      - relative
+      - group

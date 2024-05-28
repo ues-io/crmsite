@@ -43,187 +43,193 @@ definition:
         mode: EDIT
         components:
           - uesio/io.box:
-              uesio.display:
-                - type: hasNoValue
-                  wire: getstartedform
-                  value: ${success}
               uesio.styleTokens:
                 root:
                   - from-indigo-700
                   - to-violet-600
                   - bg-gradient-to-br
-                  - grid
-                  - grid-cols-6
-                  - "[min-height:100vh]"
               components:
                 - uesio/io.box:
+                    uesio.variant: uesio/crmsite.section
                     uesio.styleTokens:
                       root:
-                        - pt-[8vw]
-                        - pb-48
-                        - col-span-4
+                        - grid
+                        - grid-cols-6
+                        - "[min-height:100cqh]"
+                    uesio.display:
+                      - type: hasNoValue
+                        wire: getstartedform
+                        value: ${success}
                     components:
                       - uesio/io.box:
                           uesio.styleTokens:
                             root:
-                              - md:ml-36
-                              - ml-12
+                              - pt-[8cqw]
+                              - pb-48
+                              - lg:col-span-4
+                              - col-span-6
                           components:
                             - uesio/io.box:
                                 components:
+                                  - uesio/io.box:
+                                      components:
+                                        - uesio/io.text:
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-5xl
+                                                - text-indigo-50
+                                                - font-bold
+                                                - leading-tight
+                                                - md:leading-tight
+                                                - tracking-wide
+                                            text: Let's go!
+                                            element: div
+                                        - uesio/io.text:
+                                            uesio.styleTokens:
+                                              root:
+                                                - mt-[3cqw]
+                                                - text-base
+                                                - text-indigo-100
+                                                - leading-normal
+                                                - md:leading-normal
+                                                - tracking-wide
+                                                - font-light
+                                            text: Your CRM site will be created momentarily. We just need a bit of info about you.
+                                            element: div
+                                  - uesio/io.grid:
+                                      uesio.variant: uesio/crmsite.two_columns
+                                      uesio.styleTokens:
+                                        root:
+                                          - my-6
+                                      items:
+                                        - uesio/io.field:
+                                            uesio.variant: uesio/crmsite.form
+                                            fieldId: firstname
+                                        - uesio/io.field:
+                                            uesio.variant: uesio/crmsite.form
+                                            fieldId: lastname
+                                        - uesio/io.field:
+                                            uesio.variant: uesio/crmsite.form
+                                            fieldId: email
+                                        - uesio/io.field:
+                                            uesio.variant: uesio/crmsite.form
+                                            fieldId: company
                                   - uesio/io.text:
                                       uesio.styleTokens:
                                         root:
-                                          - text-[5.5vw]
-                                          - text-indigo-50
-                                          - font-bold
-                                          - leading-tight
-                                          - md:leading-tight
-                                          - tracking-wide
-                                      text: Let's go!
-                                      element: div
-                                  - uesio/io.text:
-                                      uesio.styleTokens:
-                                        root:
-                                          - mt-[3vw]
-                                          - text-[1.4vw]
-                                          - text-indigo-100
-                                          - leading-normal
-                                          - md:leading-normal
-                                          - tracking-wide
-                                          - font-light
-                                      text: Your CRM site will be created momentarily. We just need a bit of info about you.
-                                      element: div
-                            - uesio/io.grid:
-                                uesio.variant: uesio/crmsite.two_columns
-                                uesio.styleTokens:
-                                  root:
-                                    - my-6
-                                items:
-                                  - uesio/io.field:
-                                      uesio.variant: uesio/crmsite.form
-                                      fieldId: firstname
-                                  - uesio/io.field:
-                                      uesio.variant: uesio/crmsite.form
-                                      fieldId: lastname
-                                  - uesio/io.field:
-                                      uesio.variant: uesio/crmsite.form
-                                      fieldId: email
-                                  - uesio/io.field:
-                                      uesio.variant: uesio/crmsite.form
-                                      fieldId: company
-                            - uesio/io.text:
-                                uesio.styleTokens:
-                                  root:
-                                    - mt-[3vw]
-                                    - text-[1.4vw]
-                                    - text-indigo-100
-                                    - leading-normal
-                                    - md:leading-normal
-                                    - tracking-wide
-                                    - font-light
-                                    - "[text-wrap:pretty]"
-                                text: "Pick a custom URL prefix for your CRM."
-                                element: div
-                            - uesio/io.grid:
-                                uesio.variant: uesio/crmsite.two_columns
-                                uesio.styleTokens:
-                                  root:
-                                    - my-6
-                                items:
-                                  - uesio/io.field:
-                                      uesio.variant: uesio/crmsite.form
-                                      fieldId: subdomain
-                                  - uesio/io.text:
-                                      uesio.display:
-                                        - type: hasValue
-                                          value: ${subdomain}
-                                      element: div
-                                      uesio.styleTokens:
-                                        root:
-                                          - text-indigo-100
+                                          - mt-[3cqw]
                                           - text-base
-                                          - tracking-wide
-                                          - py-2
-                                          - px-3
-                                          - mt-8
-                                          - mb-2
-                                          - bg-black/10
-                                          - rounded
-                                          - border-1
-                                          - border-transparent
-                                      text: https://${subdomain}-crm.$Site{domain}
-                            - uesio/io.button:
-                                uesio.variant: uesio/crmsite.primary_nofill
-                                text: Create my CRM Site
-                                signals:
-                                  - signal: bot/CALL
-                                    bot: uesio/crmsite.create_site
-                                    params:
-                                      firstname: ${firstname}
-                                      lastname: ${lastname}
-                                      email: ${email}
-                                      company: ${company}
-                                      subdomain: ${subdomain}
-                                  - signal: wire/UPDATE_RECORD
-                                    wire: getstartedform
-                                    field: success
-                                    value: true
-                            - uesio/io.button:
-                                uesio.variant: uesio/crmsite.secondary
-                                text: Go Back
-                                signals:
-                                  - signal: route/NAVIGATE
-                                    path: home
-          - uesio/io.box:
-              uesio.display:
-                - type: hasValue
-                  wire: getstartedform
-                  value: ${success}
-              uesio.styleTokens:
-                root:
-                  - from-sky-700
-                  - to-cyan-600
-                  - bg-gradient-to-br
-                  - grid
-                  - grid-cols-6
-                  - "[min-height:100vh]"
-              components:
-                - uesio/io.box:
-                    uesio.styleTokens:
-                      root:
-                        - pt-[8vw]
-                        - pb-48
-                        - col-span-4
-                    components:
-                      - uesio/io.box:
-                          uesio.styleTokens:
-                            root:
-                              - md:ml-36
-                              - ml-12
-                          components:
-                            - uesio/io.box:
-                                components:
-                                  - uesio/io.text:
-                                      uesio.styleTokens:
-                                        root:
-                                          - text-[5.5vw]
-                                          - text-indigo-50
-                                          - font-bold
-                                          - leading-tight
-                                          - md:leading-tight
-                                          - tracking-wide
-                                      text: You're all set.
-                                      element: div
-                                  - uesio/io.text:
-                                      uesio.styleTokens:
-                                        root:
-                                          - mt-[4vw]
-                                          - text-[1.4vw]
                                           - text-indigo-100
                                           - leading-normal
                                           - md:leading-normal
                                           - tracking-wide
                                           - font-light
-                                      text: "We sent you an email at ${email}. Click on the link in the email to log into your CRM and get started."
+                                          - "[text-wrap:pretty]"
+                                      text: "Pick a custom URL prefix for your CRM."
                                       element: div
+                                  - uesio/io.grid:
+                                      uesio.variant: uesio/crmsite.two_columns
+                                      uesio.styleTokens:
+                                        root:
+                                          - my-6
+                                      items:
+                                        - uesio/io.field:
+                                            uesio.variant: uesio/crmsite.form
+                                            fieldId: subdomain
+                                        - uesio/io.text:
+                                            uesio.display:
+                                              - type: hasValue
+                                                value: ${subdomain}
+                                            element: div
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-indigo-100
+                                                - text-base
+                                                - tracking-wide
+                                                - py-2
+                                                - px-3
+                                                - mt-8
+                                                - mb-2
+                                                - bg-black/10
+                                                - rounded
+                                                - border-1
+                                                - border-transparent
+                                            text: https://${subdomain}-crm.$Site{domain}
+                                  - uesio/io.button:
+                                      uesio.variant: uesio/crmsite.primary_nofill
+                                      text: Create my CRM Site
+                                      signals:
+                                        - signal: bot/CALL
+                                          bot: uesio/crmsite.create_site
+                                          params:
+                                            firstname: ${firstname}
+                                            lastname: ${lastname}
+                                            email: ${email}
+                                            company: ${company}
+                                            subdomain: ${subdomain}
+                                        - signal: wire/UPDATE_RECORD
+                                          wire: getstartedform
+                                          field: success
+                                          value: true
+                                  - uesio/io.button:
+                                      uesio.variant: uesio/crmsite.secondary
+                                      text: Go Back
+                                      signals:
+                                        - signal: route/NAVIGATE
+                                          path: home
+                - uesio/io.box:
+                    uesio.variant: uesio/crmsite.section
+                    uesio.styleTokens:
+                      root:
+                        - grid
+                        - grid-cols-6
+                        - "[min-height:100cqh]"
+                    uesio.display:
+                      - type: hasValue
+                        wire: getstartedform
+                        value: ${success}
+                    components:
+                      - uesio/io.box:
+                          uesio.styleTokens:
+                            root:
+                              - pt-[8cqw]
+                              - pb-48
+                              - md:col-span-4
+                              - col-span-6
+                          components:
+                            - uesio/io.box:
+                                components:
+                                  - uesio/io.box:
+                                      components:
+                                        - uesio/io.text:
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-5xl
+                                                - text-indigo-50
+                                                - font-bold
+                                                - leading-tight
+                                                - md:leading-tight
+                                                - tracking-wide
+                                            text: You're all set.
+                                            element: div
+                                        - uesio/io.text:
+                                            uesio.styleTokens:
+                                              root:
+                                                - mt-[4cqw]
+                                                - text-base
+                                                - text-indigo-100
+                                                - leading-normal
+                                                - md:leading-normal
+                                                - tracking-wide
+                                                - font-light
+                                            text: "We sent you an email at ${email}. Click on the link in the email to log into your CRM and get started."
+                                            element: div
+                                  - uesio/io.button:
+                                      uesio.styleTokens:
+                                        root:
+                                          - mt-8
+                                      uesio.variant: uesio/crmsite.primary_nofill
+                                      text: All Done
+                                      signals:
+                                        - signal: route/NAVIGATE
+                                          path: home

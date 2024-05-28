@@ -1,0 +1,10 @@
+name: textsection
+label: Text Section
+definition:
+  uesio.styleTokens:
+    root:
+      - my-10
+      - md:px-14
+      - md:py-14
+      - px-8
+      - py-6

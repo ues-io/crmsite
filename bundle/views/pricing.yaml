@@ -1,0 +1,108 @@
+name: pricing
+definition:
+  # Wires connect to data in collections
+  wires:
+  # Components determine the layout and composition of your view
+  components:
+    - uesio/io.box:
+        uesio.styleTokens:
+          root:
+            - from-indigo-700
+            - to-violet-600
+            - bg-gradient-to-br
+        components:
+          - uesio/core.view:
+              view: uesio/crmsite.header
+          - uesio/io.box:
+              uesio.variant: uesio/crmsite.section
+              components:
+                - uesio/io.box:
+                    uesio.variant: uesio/crmsite.textsection
+                    components:
+                      - uesio/io.box:
+                          components:
+                            - uesio/io.text:
+                                uesio.styleTokens:
+                                  root:
+                                    - md:text-[6cqw]
+                                    - text-5xl
+                                    - text-white
+                                    - font-bold
+                                    - leading-tight
+                                    - md:leading-tight
+                                    - tracking-wide
+                                    - mb-8
+                                text: Easy Math. Smart Plans.
+                                element: div
+                            - uesio/io.button:
+                                uesio.variant: uesio/crmsite.primary_nofill
+                                text: Get Started for Free
+                                signals:
+                                  - signal: route/NAVIGATE
+                                    path: getstarted
+    - uesio/crmsite.splithero:
+        leftBackground: slate-100
+        rightBackground: slate-50
+        left:
+          - uesio/io.box:
+              uesio.variant: uesio/crmsite.textsection
+              components:
+                - uesio/io.text:
+                    uesio.variant: uesio/crmsite.subheader
+                    text: Getting Started
+                - uesio/io.text:
+                    uesio.variant: uesio/crmsite.halfhero
+                    text: Test the waters with our free plan.
+                - uesio/crmsite.pricingitem:
+                    text: Up to 5 Users
+                - uesio/crmsite.pricingitem:
+                    text: Limited Data Storage
+                - uesio/crmsite.pricingitem:
+                    text: Limited Usage
+                - uesio/io.text:
+                    uesio.variant: uesio/crmsite.halfhero
+                    uesio.styleTokens:
+                      root:
+                        - text-sky-500
+                    text: Free
+        right:
+          - uesio/io.box:
+              uesio.variant: uesio/crmsite.textsection
+              components:
+                - uesio/io.text:
+                    uesio.variant: uesio/crmsite.subheader
+                    text: Unlimited Customization
+                - uesio/io.text:
+                    uesio.variant: uesio/crmsite.halfhero
+                    text: Get Premium features and support.
+                - uesio/crmsite.pricingitem:
+                    text: Unlimited Users
+                - uesio/crmsite.pricingitem:
+                    text: Premium Support
+                - uesio/crmsite.pricingitem:
+                    text: AI Features
+                - uesio/io.text:
+                    uesio.variant: uesio/crmsite.halfhero
+                    uesio.styleTokens:
+                      root:
+                        - text-sky-500
+                    text: $99/mo
+    - uesio/io.box:
+        uesio.styleTokens:
+          root:
+            - bg-sky-200
+        components:
+          - uesio/io.box:
+              uesio.variant: uesio/crmsite.section
+              components:
+                - uesio/io.box:
+                    uesio.variant: uesio/crmsite.textsection
+                    components:
+                      - uesio/io.text:
+                          uesio.styleTokens:
+                            root:
+                              - text-sky-500
+                              - text-2xl
+                              - font-light
+                              - leading-normal
+                          text: "Note: ues.io CRM is currenly in Beta Testing. The premium plan is not yet ready. Free tier users will get some premium features for a limited time."
