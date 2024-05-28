@@ -106,3 +106,5 @@ definition:
                               - font-light
                               - leading-normal
                           text: "Note: ues.io CRM is currenly in Beta Testing. The premium plan is not yet ready. Free tier users will get some premium features for a limited time."
+    - uesio/core.view:
+        view: uesio/crmsite.footer
