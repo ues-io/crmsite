@@ -3,6 +3,7 @@ named: {}
 views:
   uesio/crmsite.getstarted: true
   uesio/crmsite.home: true
+  uesio/crmsite.pricing: true
   uesio/crmsite.header: true
   uesio/crmsite.footer: true
 collections: {}
