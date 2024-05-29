@@ -1,8 +1,7 @@
 name: home
 definition:
   # Wires connect to data in collections
-  wires:
-  # Components determine the layout and composition of your view
+  wires: # Components determine the layout and composition of your view
   components:
     - uesio/io.box:
         uesio.styleTokens:
@@ -80,7 +79,7 @@ definition:
                     element: div
                 - uesio/io.text:
                     uesio.variant: uesio/crmsite.hero
-                    text: Straightforward CRM. Backed by the powerful ues.io plaform.
+                    text: Straightforward CRM. Backed by the powerful ues.io platform.
     - uesio/crmsite.splithero:
         leftBackground: slate-100
         rightBackground: slate-50
