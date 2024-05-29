@@ -1,11 +1,11 @@
 name: public
 named: {}
 views:
+  uesio/crmsite.footer: true
   uesio/crmsite.getstarted: true
+  uesio/crmsite.header: true
   uesio/crmsite.home: true
   uesio/crmsite.pricing: true
-  uesio/crmsite.header: true
-  uesio/crmsite.footer: true
 collections: {}
 routes:
   uesio/crmsite.getstarted: true
