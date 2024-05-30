@@ -136,6 +136,68 @@ definition:
                                         - uesio/io.field:
                                             uesio.variant: uesio/crmsite.form
                                             fieldId: subdomain
+                                        - uesio/io.box: {}
+                                        - uesio/io.text:
+                                            uesio.display:
+                                              - type: hasValue
+                                                value: ${firstname}
+                                            element: div
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-indigo-100
+                                                - text-base
+                                                - tracking-wide
+                                                - py-2
+                                                - px-3
+                                                - mt-8
+                                                - mb-2
+                                                - bg-black/10
+                                                - rounded
+                                                - border-1
+                                                - border-transparent
+                                                - italic
+                                                - text-right
+                                            text: "This will be your user name:"
+                                        - uesio/io.text:
+                                            uesio.display:
+                                              - type: hasValue
+                                                value: ${firstname}
+                                            element: div
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-indigo-100
+                                                - text-base
+                                                - tracking-wide
+                                                - py-2
+                                                - px-3
+                                                - mt-8
+                                                - mb-2
+                                                - bg-black/10
+                                                - rounded
+                                                - border-1
+                                                - border-transparent
+                                            text: ${firstname}
+                                        - uesio/io.text:
+                                            uesio.display:
+                                              - type: hasValue
+                                                value: ${subdomain}
+                                            element: div
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-indigo-100
+                                                - text-base
+                                                - tracking-wide
+                                                - py-2
+                                                - px-3
+                                                - mt-8
+                                                - mb-2
+                                                - bg-black/10
+                                                - rounded
+                                                - border-1
+                                                - border-transparent
+                                                - italic
+                                                - text-right
+                                            text: "This will be the link to your site:"
                                         - uesio/io.text:
                                             uesio.display:
                                               - type: hasValue
@@ -177,6 +239,18 @@ definition:
                                       signals:
                                         - signal: route/NAVIGATE
                                           path: home
+                                  - uesio/io.box:
+                                      components:
+                                        - uesio/io.link:
+                                            text: By creating your site you agree to have read and accepted  our Terms of Service found here.
+                                            link: https://ues.io/terms
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-white
+                                                - italic
+                                      uesio.styleTokens:
+                                        root:
+                                          - pt-2
                 - uesio/io.box:
                     uesio.variant: uesio/crmsite.section
                     uesio.styleTokens:
