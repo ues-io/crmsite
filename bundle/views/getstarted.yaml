@@ -136,25 +136,39 @@ definition:
                                         - uesio/io.field:
                                             uesio.variant: uesio/crmsite.form
                                             fieldId: subdomain
-                                        - uesio/io.text:
+                                        - uesio/io.box:
+                                            uesio.styleTokens:
+                                              root:
+                                                - pt-2.5
+                                                - pb-2
                                             uesio.display:
                                               - type: hasValue
                                                 value: ${subdomain}
-                                            element: div
-                                            uesio.styleTokens:
-                                              root:
-                                                - text-indigo-100
-                                                - text-base
-                                                - tracking-wide
-                                                - py-2
-                                                - px-3
-                                                - mt-8
-                                                - mb-2
-                                                - bg-black/10
-                                                - rounded
-                                                - border-1
-                                                - border-transparent
-                                            text: https://${subdomain}-crm.$Site{domain}
+                                            components:
+                                              - uesio/io.text:
+                                                  element: div
+                                                  text: Your Site URL
+                                                  uesio.styleTokens:
+                                                    root:
+                                                      - text-indigo-100
+                                                      - text-sm
+                                                      - uppercase
+                                                      - font-light
+                                              - uesio/io.text:
+                                                  element: div
+                                                  uesio.styleTokens:
+                                                    root:
+                                                      - text-indigo-100
+                                                      - text-base
+                                                      - tracking-wide
+                                                      - py-2
+                                                      - px-3
+                                                      - mt-0.5
+                                                      - bg-black/10
+                                                      - rounded
+                                                      - border-1
+                                                      - border-transparent
+                                                  text: https://${subdomain}-crm.$Site{domain}
                                   - uesio/io.button:
                                       uesio.variant: uesio/crmsite.primary_nofill
                                       text: Create my CRM Site
@@ -177,6 +191,36 @@ definition:
                                       signals:
                                         - signal: route/NAVIGATE
                                           path: home
+                                  - uesio/io.box:
+                                      components:
+                                        - uesio/io.text:
+                                            text: "By creating your site, you agree to have read and accepted our "
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-indigo-200
+                                                - italic
+                                                - text-sm
+                                                - font-light
+                                        - uesio/io.link:
+                                            text: Terms of Use
+                                            link: https://ues.io/terms
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-indigo-100
+                                                - italic
+                                                - text-sm
+                                        - uesio/io.text:
+                                            text: "."
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-white
+                                                - italic
+                                                - text-sm
+                                                - font-light
+                                      uesio.styleTokens:
+                                        root:
+                                          - mt-14
+                                          - "[text-wrap:pretty]"
                 - uesio/io.box:
                     uesio.variant: uesio/crmsite.section
                     uesio.styleTokens:
