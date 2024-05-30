@@ -15,11 +15,24 @@ export default function create_site(bot: ListenerBotApi) {
 		subdomain,
 	})
 
-	// Create a lead in our CRM App
-
-	// Create a new crm site
-
-	// Create a new domain for that site
-
-	// Create a new user for that site
+	bot.runIntegrationAction("uesio/core.sendgrid", "sendemail", {
+		to: ["info@ues.io"],
+		toNames: ["ues.io"],
+		from: "info@ues.io",
+		fromName: "ues.io",
+		subject: "New CRM signup",
+		plainBody: `
+		<!DOCTYPE html>
+		<html>
+			<body>
+				Someone just started the ues.io CRM journey!<br/>
+				First Name: ${firstname}<br/>
+				Last Name: ${lastname}<br/>
+				Email: ${email}<br/>
+				Company: ${company}<br/>
+				Subdomain: ${subdomain}<br/>
+			</body>
+		</html>`,
+		contentType: "text/html",
+	})
 }
