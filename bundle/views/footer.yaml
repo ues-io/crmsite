@@ -1,12 +1,105 @@
 name: footer
 definition:
   # Wires connect to data in collections
-  wires:
-  # Components determine the layout and composition of your view
+  wires: # Components determine the layout and composition of your view
   components:
     - uesio/io.box:
         uesio.styleTokens:
           root:
             - bg-slate-900
-            - "[min-height:300px]"
+            - "[min-height:100px]"
         components:
+          - uesio/io.box:
+              uesio.variant: uesio/crmsite.section
+              uesio.styleTokens:
+                root:
+                  - py-12
+              components:
+                - uesio/io.box:
+                    uesio.styleTokens:
+                      root:
+                        - flex
+                        - md:gap-24
+                        - sm:gap-18
+                        - gap-6
+                    components:
+                      - uesio/io.image:
+                          file: uesio/core.logowhite
+                          height: 44
+                          signals:
+                            - signal: route/REDIRECT
+                              namespace: uesio/core
+                              path: https://ues.io
+                              newtab: true
+                      - uesio/io.grid:
+                          uesio.styleTokens:
+                            root:
+                              - lg:grid-cols-6
+                              - md:grid-cols-3
+                              - sm:grid-cols-2
+                              - grid-cols-1
+                              - gap-x-8
+                              - gap-y-1.5
+                              - grow
+                          items:
+                            - uesio/io.button:
+                                text: Pricing
+                                uesio.variant: uesio/crmsite.footerlink
+                                signals:
+                                  - signal: route/NAVIGATE
+                                    path: pricing
+                            - uesio/io.button:
+                                text: Documentation
+                                uesio.variant: uesio/crmsite.footerlink
+                                signals:
+                                  - signal: route/REDIRECT
+                                    path: https://docs.ues.io/crm
+                                    newtab: true
+                            - uesio/io.button:
+                                text: Community
+                                uesio.variant: uesio/crmsite.footerlink
+                                signals:
+                                  - signal: route/REDIRECT
+                                    path: https://community.ues.io
+                                    newtab: true
+                            - uesio/io.button:
+                                text: Who we are
+                                uesio.variant: uesio/crmsite.footerlink
+                                signals:
+                                  - signal: route/REDIRECT
+                                    path: https://thecloudmasters.com
+                                    newtab: true
+                            - uesio/io.button:
+                                text: Privacy Policy
+                                uesio.variant: uesio/crmsite.footerlink
+                                signals:
+                                  - signal: route/REDIRECT
+                                    path: https://ues.io/privacy
+                                    newtab: true
+                            - uesio/io.button:
+                                text: Terms of Use
+                                uesio.variant: uesio/crmsite.footerlink
+                                signals:
+                                  - signal: route/REDIRECT
+                                    path: https://ues.io/terms
+                                    newtab: true
+                      - uesio/io.image:
+                          file: uesio/crmsite.aws_marketplace
+                          height: 44
+                          signals:
+                            - signal: route/REDIRECT
+                              path: https://aws.amazon.com/marketplace/pp/prodview-hr3qr5gr22ha2?sr=0-1&ref_=beagle&applicationId=AWSMPContessa
+                              newtab: true
+          - uesio/io.box:
+              uesio.styleTokens:
+                root:
+                  - p-4
+                  - text-center
+              components:
+                - uesio/io.text:
+                    text: UESIO Inc. | All rights Reserved © | Open Source GPL3
+                    uesio.styleTokens:
+                      root:
+                        - text-slate-500
+                        - text-xs
+                        - font-light

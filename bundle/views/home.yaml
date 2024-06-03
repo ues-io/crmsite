@@ -48,6 +48,14 @@ definition:
                                       signals:
                                         - signal: route/NAVIGATE
                                           path: getstarted
+                                  - uesio/io.text:
+                                      text: Tired of expensive, per-user fees for features your team doesn't even use? Our free plan equips your first 5 users with all the essential CRM tools you need to manage your sales pipeline effectively.
+                                      element: div
+                                      align: left
+                                      uesio.variant: uesio/crmsite.herosubtext
+                                      uesio.styleTokens:
+                                        root:
+                                          - text-indigo-100
                       - uesio/io.box:
                           uesio.styleTokens:
                             root:
@@ -79,7 +87,10 @@ definition:
                     element: div
                 - uesio/io.text:
                     uesio.variant: uesio/crmsite.hero
-                    text: Straightforward CRM. Backed by the powerful ues.io platform.
+                    text: Straightforward CRM backed by the powerful ues.io platform.
+                - uesio/io.text:
+                    text: The User Experience Studio (ues.io) is a comprehensive, open source, no-code/pro-code, AI enabled platform. It offers the freedom to extend your application functionality with your own code. Only start paying for usage when your users are engaging.
+                    uesio.variant: uesio/crmsite.herosubtext
     - uesio/crmsite.splithero:
         leftBackground: slate-100
         rightBackground: slate-50
@@ -93,6 +104,9 @@ definition:
                 - uesio/io.text:
                     uesio.variant: uesio/crmsite.halfhero
                     text: Qualify and deduplicate leads.
+                - uesio/io.text:
+                    text: Take your sales game to the next level with optional AI integrations. Streamline your sales process, gain valuable insights, and boost overall efficiency.
+                    uesio.variant: uesio/crmsite.herosubtext
         right:
           - uesio/io.image:
               file: uesio/crmsite.mockup_lead_convert
@@ -128,5 +142,19 @@ definition:
                 - uesio/io.text:
                     uesio.variant: uesio/crmsite.halfhero
                     text: Track deals from start to closed.
+                - uesio/io.text:
+                    uesio.variant: uesio/crmsite.herosubtext
+                    text: Struggling to keep tabs on your sales pipeline? Close deals faster. ues.io CRM tracks every step of the sales journey, from initial contact to closed deals.  Stop juggling spreadsheets and focus on closing deals.
+                    uesio.styleTokens:
+                      root:
+                        - text-sky-700
+                - uesio/io.box:
+                    components:
+                      - uesio/io.button:
+                          text: Get Started for Free
+                          uesio.variant: uesio/crmsite.primary_dark
+                          signals:
+                            - signal: route/NAVIGATE
+                              path: getstarted
     - uesio/core.view:
         view: uesio/crmsite.footer
