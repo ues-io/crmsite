@@ -1,0 +1,11 @@
+name: herosubtext
+label: Hero Sub Text
+definition:
+  uesio.styleTokens:
+    root:
+      - text-lg
+      - font-light
+      - my-10
+      - leading-loose
+      - text-slate-600
+  element: div

@@ -49,16 +49,13 @@ definition:
                                         - signal: route/NAVIGATE
                                           path: getstarted
                                   - uesio/io.text:
-                                      text: Tired of expensive, per-user fees for features your team doesn't even use? UES.IO CRM is here to change the game. Our free plan equips your first 5 users with all the essential CRM tools you need to manage your sales pipeline effectively, at no cost.
+                                      text: Tired of expensive, per-user fees for features your team doesn't even use? Our free plan equips your first 5 users with all the essential CRM tools you need to manage your sales pipeline effectively.
                                       element: div
                                       align: left
-                                      uesio.variant: ""
+                                      uesio.variant: uesio/crmsite.herosubtext
                                       uesio.styleTokens:
                                         root:
-                                          - text-white
-                                          - pt-5
-                                          - text-justify
-                                          - text-lg
+                                          - text-indigo-100
                       - uesio/io.box:
                           uesio.styleTokens:
                             root:
@@ -92,13 +89,8 @@ definition:
                     uesio.variant: uesio/crmsite.hero
                     text: Straightforward CRM backed by the powerful ues.io platform.
                 - uesio/io.text:
-                    text: ues.io (u)ser (e)xperience (s)tudio is a comprehensive open source no-code/pro-code AI enabled platform which offers you the freedom to extend your application functionality with your own code and only start paying on a usage basis when your users are engaging.
-                    element: div
-                    align: justify
-                    uesio.variant: ""
-                    uesio.styleTokens:
-                      root:
-                        - text-lg
+                    text: The User Experience Studio (ues.io) is a comprehensive, open source, no-code/pro-code, AI enabled platform. It offers the freedom to extend your application functionality with your own code. Only start paying for usage when your users are engaging.
+                    uesio.variant: uesio/crmsite.herosubtext
     - uesio/crmsite.splithero:
         leftBackground: slate-100
         rightBackground: slate-50
@@ -114,11 +106,7 @@ definition:
                     text: Qualify and deduplicate leads.
                 - uesio/io.text:
                     text: Take your sales game to the next level with optional AI integrations. Streamline your sales process, gain valuable insights, and boost overall efficiency.
-                    element: div
-                    align: justify
-                    uesio.styleTokens:
-                      root:
-                        - text-lg
+                    uesio.variant: uesio/crmsite.herosubtext
         right:
           - uesio/io.image:
               file: uesio/crmsite.mockup_lead_convert
@@ -155,32 +143,18 @@ definition:
                     uesio.variant: uesio/crmsite.halfhero
                     text: Track deals from start to closed.
                 - uesio/io.text:
-                    uesio.variant: ""
-                    text: Struggling to keep tabs on your sales pipeline? Close deals faster. UES.IO CRM tracks every step of the sales journey, from initial contact to closed deals.  Stop juggling spreadsheets and focus on closing deals – try UES.IO CRM
+                    uesio.variant: uesio/crmsite.herosubtext
+                    text: Struggling to keep tabs on your sales pipeline? Close deals faster. ues.io CRM tracks every step of the sales journey, from initial contact to closed deals.  Stop juggling spreadsheets and focus on closing deals.
                     uesio.styleTokens:
                       root:
-                        - text-lg
-                        - pr-2
-                    align: justify
+                        - text-sky-700
                 - uesio/io.box:
                     components:
                       - uesio/io.button:
-                          text: GET STARTED FOR FREE
-                          icon: ""
-                          uesio.variant: uesio/crmsite.primary
-                          iconPlacement: start
-                          uesio.styleTokens:
-                            root:
-                              - max-h-8
-                              - w-max
-                              - shadow
-                              - hover:shadow-lg
+                          text: Get Started for Free
+                          uesio.variant: uesio/crmsite.primary_dark
                           signals:
                             - signal: route/NAVIGATE
                               path: getstarted
-                    uesio.variant: ""
-                    uesio.styleTokens:
-                      root:
-                        - pt-3
     - uesio/core.view:
         view: uesio/crmsite.footer
