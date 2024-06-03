@@ -1,12 +1,161 @@
 name: footer
 definition:
   # Wires connect to data in collections
-  wires:
-  # Components determine the layout and composition of your view
+  wires: # Components determine the layout and composition of your view
   components:
     - uesio/io.box:
         uesio.styleTokens:
           root:
             - bg-slate-900
-            - "[min-height:300px]"
+            - "[min-height:100px]"
         components:
+          - uesio/io.grid:
+              uesio.variant: uesio/io.three_columns
+              items:
+                - uesio/io.box:
+                    components:
+                      - uesio/io.image:
+                          loading: lazy
+                          uesio.variant: ""
+                          file: uesio/crmsite.logowhite_full
+                          uesio.styleTokens:
+                            root:
+                              - p-2
+                          height: 60
+                          signals:
+                            - signal: route/REDIRECT
+                              namespace: uesio/core
+                              path: https://ues.io
+                              newtab: true
+                    uesio.styleTokens:
+                      root:
+                        - pl-2
+                - uesio/io.box: {}
+                - uesio/io.box:
+                    components:
+                      - uesio/io.button:
+                          text: Pricing
+                          icon: ""
+                          uesio.variant: uesio/io.default
+                          iconPlacement: start
+                          uesio.styleTokens:
+                            root:
+                              - text-white
+                              - mr-4
+                          signals:
+                            - signal: route/NAVIGATE
+                              path: pricing
+                      - uesio/io.button:
+                          text: Documentation
+                          icon: ""
+                          uesio.variant: uesio/io.default
+                          iconPlacement: start
+                          uesio.styleTokens:
+                            root:
+                              - text-white
+                              - mr-4
+                          signals:
+                            - signal: route/REDIRECT
+                              path: https://docs.ues.io/crm
+                              newtab: true
+                      - uesio/io.button:
+                          text: Community
+                          icon: ""
+                          uesio.variant: uesio/io.default
+                          iconPlacement: start
+                          uesio.styleTokens:
+                            root:
+                              - text-white
+                          signals:
+                            - signal: route/REDIRECT
+                              path: https://community.ues.io
+                              newtab: true
+                    uesio.styleTokens:
+                      root:
+                        - pl-2
+                        - pt-9
+                - uesio/io.box:
+                    components:
+                      - uesio/io.button:
+                          text: Who we are
+                          icon: ""
+                          uesio.variant: uesio/builder.buildtitle
+                          iconPlacement: start
+                          uesio.styleTokens:
+                            root:
+                              - mr-4
+                              - text-white
+                          signals:
+                            - signal: route/REDIRECT
+                              path: https://thecloudmasters.com
+                              newtab: true
+                      - uesio/io.button:
+                          text: Privacy Policy
+                          icon: ""
+                          uesio.variant: uesio/builder.buildtitle
+                          iconPlacement: start
+                          uesio.styleTokens:
+                            root:
+                              - text-white
+                              - mr-4
+                          signals:
+                            - signal: route/REDIRECT
+                              path: https://ues.io/privacy
+                              newtab: true
+                      - uesio/io.button:
+                          text: Terms of Use
+                          icon: ""
+                          uesio.variant: uesio/builder.buildtitle
+                          iconPlacement: start
+                          uesio.styleTokens:
+                            root:
+                              - text-white
+                          signals:
+                            - signal: route/REDIRECT
+                              path: https://ues.io/terms
+                              newtab: true
+                      - uesio/io.text:
+                          text: UESIO Inc. - All rights Reserved © - Open Source GPL3
+                          element: div
+                          align: left
+                          uesio.styleTokens:
+                            root:
+                              - text-white
+                              - pl-2
+                          uesio.variant: uesio/io.smallcontent
+                    uesio.styleTokens:
+                      root:
+                        - pb-4
+                        - pl-4
+                    signals: []
+                - uesio/io.box: {}
+                - uesio/io.box:
+                    components:
+                      - uesio/io.group:
+                          columnGap: 10px
+                          components:
+                            - uesio/io.text:
+                                text: Also available on aws martketplace
+                                element: div
+                                align: left
+                                color: white
+                                uesio.variant: ""
+                                uesio.styleTokens:
+                                  root:
+                                    - text-sm
+                            - uesio/io.image:
+                                loading: lazy
+                                file: uesio/crmsite.aws_marketplace
+                                height: 40
+                                uesio.variant: ""
+                                uesio.styleTokens:
+                                  root: []
+                                signals:
+                                  - signal: route/REDIRECT
+                                    path: https://aws.amazon.com/marketplace/pp/prodview-hr3qr5gr22ha2?sr=0-1&ref_=beagle&applicationId=AWSMPContessa
+                                    newtab: true
+                          uesio.styleTokens:
+                            root: []
+                    uesio.variant: ""
+                    uesio.styleTokens:
+                      root: []
