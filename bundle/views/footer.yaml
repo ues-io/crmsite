@@ -103,3 +103,4 @@ definition:
                         - text-slate-500
                         - text-xs
                         - font-light
+                - uesio/ga4.ga4: {}
