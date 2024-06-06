@@ -15,7 +15,7 @@ export default function create_site(bot: ListenerBotApi) {
 		subdomain,
 	})
 
-	bot.runIntegrationAction("uesio/core.sendgrid", "sendemail", {
+	bot.asAdmin.runIntegrationAction("uesio/core.sendgrid", "sendemail", {
 		to: ["info@ues.io"],
 		toNames: ["ues.io"],
 		from: "info@ues.io",
