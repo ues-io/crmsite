@@ -3,3 +3,12 @@ path: pricing
 view: pricing
 theme: uesio/core.default
 title: Pricing
+tags:
+  - type: meta
+    location: body
+    name: keywords
+    content: crm vs salesforce, crm price, crm platforms, crm zoho, crm zoho pricing
+  - type: meta
+    location: head
+    name: description
+    content: Easy Math Smart Plans, crm for free, get started with crm
