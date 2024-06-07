@@ -105,11 +105,9 @@ definition:
                                         - uesio/io.field:
                                             uesio.variant: uesio/crmsite.form
                                             fieldId: firstname
-                                            placeholder: lower case
                                         - uesio/io.field:
                                             uesio.variant: uesio/crmsite.form
                                             fieldId: lastname
-                                            placeholder: lower case
                                         - uesio/io.field:
                                             uesio.variant: uesio/crmsite.form
                                             fieldId: email
@@ -138,7 +136,6 @@ definition:
                                         - uesio/io.field:
                                             uesio.variant: uesio/crmsite.form
                                             fieldId: subdomain
-                                            placeholder: lower case
                                         - uesio/io.box:
                                             uesio.styleTokens:
                                               root:
