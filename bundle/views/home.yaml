@@ -18,7 +18,7 @@ definition:
                 - uesio/io.box:
                     uesio.styleTokens:
                       root:
-                        - md:pt-[10cqw]
+                        - md:pt-[1cqw]
                         - md:pb-[15cqw]
                         - grid
                         - md:grid-cols-2
