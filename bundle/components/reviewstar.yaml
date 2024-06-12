@@ -1,0 +1,33 @@
+name: reviewstar
+category: LAYOUT
+type: DECLARATIVE
+definition:
+  - uesio/io.text:
+      uesio.variant: uesio/io.icon
+      uesio.display:
+        - type: hasNoValue
+          value: $Prop{inactive}
+      uesio.styleTokens:
+        root:
+          - text-white
+          - text-xl
+          - m-1
+      text: star
+  - uesio/io.text:
+      uesio.variant: uesio/io.icon
+      uesio.display:
+        - type: hasValue
+          value: $Prop{inactive}
+      uesio.styleTokens:
+        root:
+          - text-indigo-400
+          - text-xl
+          - m-1
+      text: star
+title: Review Star
+discoverable: true
+description: Review Star
+sections:
+  - type: HOME
+    properties:
+  - type: DISPLAY

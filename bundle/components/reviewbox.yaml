@@ -1,0 +1,98 @@
+name: reviewbox
+category: LAYOUT
+type: DECLARATIVE
+definition:
+  - uesio/io.box:
+      uesio.styleTokens:
+        root:
+          - grid
+          - items-center
+          - justify-items-center
+          - p-8
+      components:
+        - uesio/io.text:
+            uesio.styleTokens:
+              root:
+                - text-indigo-100
+                - text-base
+                - "[text-wrap:balance]"
+                - font-light
+            text: $Prop{text}
+            element: div
+        - uesio/io.box:
+            uesio.display:
+              - type: group
+                conjunction: OR
+                conditions:
+                  - type: mergeValue
+                    sourceValue: 5
+                    value: $Prop{stars}
+                  - type: hasNoValue
+                    value: $Prop{stars}
+            components:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+        - uesio/io.box:
+            uesio.display:
+              - type: mergeValue
+                sourceValue: 4
+                value: $Prop{stars}
+            components:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+        - uesio/io.box:
+            uesio.display:
+              - type: mergeValue
+                sourceValue: 3
+                value: $Prop{stars}
+            components:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+        - uesio/io.box:
+            uesio.display:
+              - type: mergeValue
+                sourceValue: 2
+                value: $Prop{stars}
+            components:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+        - uesio/io.box:
+            uesio.display:
+              - type: mergeValue
+                sourceValue: 1
+                value: $Prop{stars}
+            components:
+              - uesio/crmsite.reviewstar:
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+              - uesio/crmsite.reviewstar:
+                  inactive: true
+title: Review Box
+discoverable: true
+description: Review Box
+sections:
+  - type: HOME
+    properties:
+  - type: DISPLAY

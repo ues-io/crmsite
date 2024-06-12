@@ -10,6 +10,7 @@ definition:
               root:
                 - text-lg
                 - text-slate-800
+                - font-light
             text: $Prop{text}
       avatar:
         - uesio/io.text:

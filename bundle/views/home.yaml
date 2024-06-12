@@ -18,8 +18,6 @@ definition:
                 - uesio/io.box:
                     uesio.styleTokens:
                       root:
-                        - md:pt-[1cqw]
-                        - md:pb-[15cqw]
                         - grid
                         - md:grid-cols-2
                         - grid-cols-1
@@ -72,6 +70,24 @@ definition:
                                   root:
                                     - scale-[1.9]
                                     - md:translate-x-1/4
+          - uesio/io.box:
+              uesio.variant: uesio/crmsite.section
+              uesio.styleTokens:
+                root:
+                  - pb-10
+              components:
+                - uesio/io.grid:
+                    uesio.variant: uesio/io.three_columns
+                    items:
+                      - uesio/crmsite.reviewbox:
+                          text: '"Lovin'' it."'
+                          stars: 5
+                      - uesio/crmsite.reviewbox:
+                          text: '"Can''t stop converting leads."'
+                          stars: 4
+                      - uesio/crmsite.reviewbox:
+                          text: '"I went premium. I won''t go back."'
+                          stars: 5
     - uesio/io.box:
         uesio.variant: uesio/crmsite.section
         components:

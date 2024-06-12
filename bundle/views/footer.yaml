@@ -24,6 +24,10 @@ definition:
                         - gap-6
                     components:
                       - uesio/io.image:
+                          uesio.styleTokens:
+                            root:
+                              - opacity-80
+                              - hover:opacity-100
                           file: uesio/core.logowhite
                           height: 44
                           signals:
@@ -84,6 +88,10 @@ definition:
                                     path: https://ues.io/terms
                                     newtab: true
                       - uesio/io.image:
+                          uesio.styleTokens:
+                            root:
+                              - opacity-90
+                              - hover:opacity-100
                           file: uesio/crmsite.aws_marketplace
                           height: 44
                           signals:

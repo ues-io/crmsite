@@ -4,7 +4,8 @@ extends: uesio/io.default
 definition:
   uesio.styleTokens:
     root:
-      - text-slate-100
+      - text-slate-300
+      - hover:text-slate-100
       - text-xs
       - font-light
       - "[min-width:0px]"
