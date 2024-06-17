@@ -13,7 +13,7 @@ definition:
           - uesio/core.view:
               view: uesio/crmsite.header
           - uesio/io.box:
-              uesio.variant: uesio/crmsite.section
+              uesio.variant: uesio/sitekit.section
               components:
                 - uesio/io.box:
                     uesio.styleTokens:
@@ -41,7 +41,7 @@ definition:
                                       text: Refreshingly Simple CRM.
                                       element: div
                                   - uesio/io.button:
-                                      uesio.variant: uesio/crmsite.primary_nofill
+                                      uesio.variant: uesio/sitekit.primary_nofill
                                       text: Get Started for Free
                                       signals:
                                         - signal: route/NAVIGATE
@@ -71,7 +71,7 @@ definition:
                                     - scale-[1.9]
                                     - md:translate-x-1/4
           - uesio/io.box:
-              uesio.variant: uesio/crmsite.section
+              uesio.variant: uesio/sitekit.section
               uesio.styleTokens:
                 root:
                   - pb-10
@@ -89,7 +89,7 @@ definition:
                           text: '"I went premium. I won''t go back."'
                           stars: 5
     - uesio/io.box:
-        uesio.variant: uesio/crmsite.section
+        uesio.variant: uesio/sitekit.section
         components:
           - uesio/io.box:
               uesio.variant: uesio/crmsite.textsection
@@ -168,7 +168,7 @@ definition:
                     components:
                       - uesio/io.button:
                           text: Get Started for Free
-                          uesio.variant: uesio/crmsite.primary_dark
+                          uesio.variant: uesio/sitekit.primary_dark
                           signals:
                             - signal: route/NAVIGATE
                               path: getstarted

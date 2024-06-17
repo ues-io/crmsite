@@ -1,8 +1,0 @@
-name: primary_dark
-label: Primary Dark
-extends: uesio/crmsite.primary
-definition:
-  uesio.styleTokens:
-    root:
-      - text-white
-      - bg-slate-800

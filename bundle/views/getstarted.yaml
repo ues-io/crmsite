@@ -50,7 +50,7 @@ definition:
                   - bg-gradient-to-br
               components:
                 - uesio/io.box:
-                    uesio.variant: uesio/crmsite.section
+                    uesio.variant: uesio/sitekit.section
                     uesio.styleTokens:
                       root:
                         - grid
@@ -170,7 +170,7 @@ definition:
                                                       - border-transparent
                                                   text: https://${subdomain}-crm.$Site{domain}
                                   - uesio/io.button:
-                                      uesio.variant: uesio/crmsite.primary_nofill
+                                      uesio.variant: uesio/sitekit.primary_nofill
                                       text: Create my CRM Site
                                       signals:
                                         - signal: bot/CALL
@@ -186,7 +186,7 @@ definition:
                                           field: success
                                           value: true
                                   - uesio/io.button:
-                                      uesio.variant: uesio/crmsite.secondary
+                                      uesio.variant: uesio/sitekit.secondary
                                       text: Go Back
                                       signals:
                                         - signal: route/NAVIGATE
@@ -222,7 +222,7 @@ definition:
                                           - mt-14
                                           - "[text-wrap:pretty]"
                 - uesio/io.box:
-                    uesio.variant: uesio/crmsite.section
+                    uesio.variant: uesio/sitekit.section
                     uesio.styleTokens:
                       root:
                         - grid
@@ -272,7 +272,7 @@ definition:
                                       uesio.styleTokens:
                                         root:
                                           - mt-8
-                                      uesio.variant: uesio/crmsite.primary_nofill
+                                      uesio.variant: uesio/sitekit.primary_nofill
                                       text: All Done
                                       signals:
                                         - signal: route/NAVIGATE

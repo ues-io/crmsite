@@ -14,7 +14,7 @@ definition:
           - uesio/core.view:
               view: uesio/crmsite.header
           - uesio/io.box:
-              uesio.variant: uesio/crmsite.section
+              uesio.variant: uesio/sitekit.section
               components:
                 - uesio/io.box:
                     uesio.variant: uesio/crmsite.textsection
@@ -35,7 +35,7 @@ definition:
                                 text: Easy Math. Smart Plans.
                                 element: div
                             - uesio/io.button:
-                                uesio.variant: uesio/crmsite.primary_nofill
+                                uesio.variant: uesio/sitekit.primary_nofill
                                 text: Get Started for Free
                                 signals:
                                   - signal: route/NAVIGATE
@@ -93,7 +93,7 @@ definition:
             - bg-sky-200
         components:
           - uesio/io.box:
-              uesio.variant: uesio/crmsite.section
+              uesio.variant: uesio/sitekit.section
               components:
                 - uesio/io.box:
                     uesio.variant: uesio/crmsite.textsection

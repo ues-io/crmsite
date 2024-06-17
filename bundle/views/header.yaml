@@ -4,87 +4,52 @@ definition:
   wires:
   # Components determine the layout and composition of your view
   components:
-    - uesio/io.box:
+    - uesio/sitekit.header:
         uesio.styleTokens:
           root:
-            - md:py-8
-            - py-6
-            - sticky
-            - top-0
-            - z-10
             - from-indigo-700/95
             - to-violet-600/95
             - bg-gradient-to-br
             - "[background-size:100%_500%]"
             - backdrop-blur
-        components:
-          - uesio/io.box:
-              uesio.variant: uesio/crmsite.section
+        sticky: true
+        menuSignals:
+          - signal: panel/TOGGLE
+            panel: navmenu
+        logo:
+          - uesio/io.image:
+              file: uesio/core.logowhite
+              height: 44
+              signals:
+                - signal: "route/NAVIGATE"
+                  path: "home"
+        right:
+          - uesio/io.group:
               components:
-                - uesio/io.group:
-                    uesio.styleTokens:
-                      root:
-                        - grid
-                        - justify-between
-                    components:
-                      - uesio/io.group:
-                          components:
-                            - uesio/io.image:
-                                file: uesio/core.logowhite
-                                height: 44
-                                signals:
-                                  - signal: "route/NAVIGATE"
-                                    path: "home"
-                      - uesio/io.group:
-                          uesio.styleTokens:
-                            root:
-                              - grid
-                              - md:hidden
-                              - justify-right
-                          components:
-                            - uesio/io.button:
-                                uesio.styleTokens:
-                                  root:
-                                    - text-3xl
-                                    - text-white
-                                    - p-2
-                                icon: menu
-                                signals:
-                                  - signal: panel/TOGGLE
-                                    panel: navmenu
-                      - uesio/io.group:
-                          uesio.styleTokens:
-                            root:
-                              - gap-8
-                              - hidden
-                              - md:grid
-                          components:
-                            - uesio/io.group:
-                                components:
-                                  - uesio/io.button:
-                                      uesio.variant: uesio/crmsite.secondary
-                                      text: Pricing
-                                      signals:
-                                        - signal: route/NAVIGATE
-                                          path: pricing
-                                  - uesio/io.button:
-                                      uesio.variant: uesio/crmsite.secondary
-                                      text: Docs
-                                      signals:
-                                        - signal: route/REDIRECT
-                                          path: https://docs.ues.io/crm
-                                  - uesio/io.button:
-                                      uesio.variant: uesio/crmsite.secondary
-                                      text: Platform
-                                      signals:
-                                        - signal: route/REDIRECT
-                                          path: https://ues.io/
-                            - uesio/io.button:
-                                uesio.variant: uesio/crmsite.primary
-                                text: Get Started
-                                signals:
-                                  - signal: route/NAVIGATE
-                                    path: getstarted
+                - uesio/io.button:
+                    uesio.variant: uesio/sitekit.secondary
+                    text: Pricing
+                    signals:
+                      - signal: route/NAVIGATE
+                        path: pricing
+                - uesio/io.button:
+                    uesio.variant: uesio/sitekit.secondary
+                    text: Docs
+                    signals:
+                      - signal: route/REDIRECT
+                        path: https://docs.ues.io/crm
+                - uesio/io.button:
+                    uesio.variant: uesio/sitekit.secondary
+                    text: Platform
+                    signals:
+                      - signal: route/REDIRECT
+                        path: https://ues.io/
+          - uesio/io.button:
+              uesio.variant: uesio/sitekit.primary
+              text: Get Started
+              signals:
+                - signal: route/NAVIGATE
+                  path: getstarted
   panels:
     navmenu:
       uesio.type: uesio/io.sidepanel
@@ -103,19 +68,19 @@ definition:
                 - justify-center
             components:
               - uesio/io.button:
-                  uesio.variant: uesio/crmsite.secondary_dark
+                  uesio.variant: uesio/sitekit.secondary_dark
                   text: Pricing
                   signals:
                     - signal: route/NAVIGATE
                       path: pricing
               - uesio/io.button:
-                  uesio.variant: uesio/crmsite.secondary_dark
+                  uesio.variant: uesio/sitekit.secondary_dark
                   text: Documentation
                   signals:
                     - signal: route/REDIRECT
                       path: https://docs.ues.io/crm
               - uesio/io.button:
-                  uesio.variant: uesio/crmsite.secondary_dark
+                  uesio.variant: uesio/sitekit.secondary_dark
                   text: Platform
                   signals:
                     - signal: route/REDIRECT
@@ -124,7 +89,7 @@ definition:
                   uesio.styleTokens:
                     root:
                       - mt-8
-                  uesio.variant: uesio/crmsite.primary_dark
+                  uesio.variant: uesio/sitekit.primary_dark
                   text: Get Started
                   signals:
                     - signal: route/NAVIGATE

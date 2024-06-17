@@ -11,7 +11,7 @@ definition:
           - bg-$Prop{rightBackground}
       components:
         - uesio/io.box:
-            uesio.variant: uesio/crmsite.section
+            uesio.variant: uesio/sitekit.section
             components:
               - uesio/io.box:
                   uesio.styleTokens:
