@@ -1,0 +1,8 @@
+name: primary
+label: Primary
+extends: uesio/crmsite.secondary
+definition:
+  uesio.styleTokens:
+    root:
+      - text-black
+      - bg-white

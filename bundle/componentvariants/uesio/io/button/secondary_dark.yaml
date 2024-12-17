@@ -1,0 +1,7 @@
+name: secondary_dark
+label: Secondary Dark
+extends: uesio/crmsite.secondary
+definition:
+  uesio.styleTokens:
+    root:
+      - text-slate-800
