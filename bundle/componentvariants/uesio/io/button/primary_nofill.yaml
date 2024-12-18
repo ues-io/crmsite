@@ -1,0 +1,10 @@
+name: primary_nofill
+label: Primary No Fill
+extends: uesio/crmsite.primary
+definition:
+  uesio.styleTokens:
+    root:
+      - text-white
+      - bg-transparent
+      - border-2
+      - border-white
