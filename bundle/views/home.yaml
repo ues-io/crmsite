@@ -3,94 +3,95 @@ definition:
   # Wires connect to data in collections
   wires: # Components determine the layout and composition of your view
   components:
-    - uesio/io.box:
-        uesio.styleTokens:
-          root:
-            - from-indigo-700
-            - to-violet-600
-            - bg-gradient-to-br
-        components:
-          - uesio/core.view:
-              view: uesio/crmsite.header
+    - uesio/io.viewlayout:
+        uesio.variant: uesio/io.default
+        content:
           - uesio/io.box:
-              uesio.variant: uesio/sitekit.section
+              uesio.styleTokens:
+                root:
+                  - from-indigo-700
+                  - to-violet-600
+                  - bg-gradient-to-br
               components:
                 - uesio/io.box:
-                    uesio.styleTokens:
-                      root:
-                        - grid
-                        - md:grid-cols-2
-                        - grid-cols-1
+                    uesio.variant: uesio/sitekit.section
                     components:
-                      - uesio/io.box:
-                          uesio.variant: uesio/crmsite.textsection
-                          components:
-                            - uesio/io.box:
-                                components:
-                                  - uesio/io.text:
-                                      uesio.styleTokens:
-                                        root:
-                                          - md:text-[6cqw]
-                                          - text-5xl
-                                          - text-white
-                                          - font-bold
-                                          - leading-tight
-                                          - md:leading-tight
-                                          - tracking-wide
-                                          - mb-8
-                                      text: Refreshingly Simple CRM.
-                                      element: div
-                                  - uesio/io.button:
-                                      uesio.variant: uesio/sitekit.primary_nofill
-                                      text: Get Started for Free
-                                      signals:
-                                        - signal: route/NAVIGATE
-                                          path: getstarted
-                                  - uesio/io.text:
-                                      text: Tired of expensive, per-user fees for features your team doesn't even use? Our free plan equips your first 5 users with all the essential CRM tools you need to manage your sales pipeline effectively.
-                                      element: div
-                                      align: left
-                                      uesio.variant: uesio/crmsite.herosubtext
-                                      uesio.styleTokens:
-                                        root:
-                                          - text-indigo-100
                       - uesio/io.box:
                           uesio.styleTokens:
                             root:
                               - grid
-                              - items-center
-                              - justify-center
-                              - mt-[18cqw]
-                              - mb-[28cqw]
-                              - md:my-0
+                              - md:grid-cols-2
+                              - grid-cols-1
                           components:
-                            - uesio/io.image:
-                                file: uesio/crmsite.mockup_leads
+                            - uesio/io.box:
+                                uesio.variant: uesio/crmsite.textsection
+                                components:
+                                  - uesio/io.box:
+                                      components:
+                                        - uesio/io.text:
+                                            uesio.styleTokens:
+                                              root:
+                                                - md:text-[6cqw]
+                                                - text-5xl
+                                                - text-white
+                                                - font-bold
+                                                - leading-tight
+                                                - md:leading-tight
+                                                - tracking-wide
+                                                - mb-8
+                                            text: Refreshingly Simple CRM.
+                                            element: div
+                                        - uesio/io.button:
+                                            uesio.variant: uesio/sitekit.primary_nofill
+                                            text: Get Started for Free
+                                            signals:
+                                              - signal: route/NAVIGATE
+                                                path: getstarted
+                                        - uesio/io.text:
+                                            text: Tired of expensive, per-user fees for features your team doesn't even use? Our free plan equips your first 5 users with all the essential CRM tools you need to manage your sales pipeline effectively.
+                                            element: div
+                                            align: left
+                                            uesio.variant: uesio/crmsite.herosubtext
+                                            uesio.styleTokens:
+                                              root:
+                                                - text-indigo-100
+                            - uesio/io.box:
                                 uesio.styleTokens:
                                   root:
-                                    - scale-[1.9]
-                                    - md:translate-x-1/4
-          - uesio/io.box:
-              uesio.variant: uesio/sitekit.section
-              uesio.styleTokens:
-                root:
-                  - pb-10
-              components:
-                - uesio/io.grid:
-                    uesio.variant: uesio/io.three_columns
-                    items:
-                      - uesio/crmsite.reviewbox:
-                          text: '"Lovin'' it."'
-                          stars: 5
-                      - uesio/crmsite.reviewbox:
-                          text: '"Can''t stop converting leads."'
-                          stars: 4
-                      - uesio/crmsite.reviewbox:
-                          text: '"I went premium. I won''t go back."'
-                          stars: 5
-    - uesio/io.box:
-        uesio.variant: uesio/sitekit.section
-        components:
+                                    - grid
+                                    - items-center
+                                    - justify-center
+                                    - mt-[18cqw]
+                                    - mb-[28cqw]
+                                    - md:my-0
+                                components:
+                                  - uesio/io.image:
+                                      file: uesio/crmsite.mockup_leads
+                                      uesio.styleTokens:
+                                        root:
+                                          - scale-[1.9]
+                                          - md:translate-x-1/4
+                - uesio/io.box:
+                    uesio.variant: uesio/sitekit.section
+                    uesio.styleTokens:
+                      root:
+                        - pb-10
+                    components:
+                      - uesio/io.grid:
+                          uesio.variant: uesio/io.three_columns
+                          items:
+                            - uesio/crmsite.reviewbox:
+                                text: '"Lovin'' it."'
+                                stars: 5
+                            - uesio/crmsite.reviewbox:
+                                text: '"Can''t stop converting leads."'
+                                stars: 4
+                            - uesio/crmsite.reviewbox:
+                                text: '"I went premium. I won''t go back."'
+                                stars: 5
+                            - uesio/io.box:
+                                uesio.variant: uesio/sitekit.section
+                                components: []
           - uesio/io.box:
               uesio.variant: uesio/crmsite.textsection
               components:
@@ -107,29 +108,43 @@ definition:
                 - uesio/io.text:
                     text: The User Experience Studio (ues.io) is a comprehensive, open source, no-code/pro-code, AI enabled platform. It offers the freedom to extend your application functionality with your own code. Only start paying for usage when your users are engaging.
                     uesio.variant: uesio/crmsite.herosubtext
-    - uesio/crmsite.splithero:
-        leftBackground: slate-100
-        rightBackground: slate-50
-        left:
-          - uesio/io.box:
-              uesio.variant: uesio/crmsite.textsection
-              components:
-                - uesio/io.text:
-                    uesio.variant: uesio/crmsite.subheader
-                    text: Prospecting
-                - uesio/io.text:
-                    uesio.variant: uesio/crmsite.halfhero
-                    text: Qualify and deduplicate leads.
-                - uesio/io.text:
-                    text: Take your sales game to the next level with optional AI integrations. Streamline your sales process, gain valuable insights, and boost overall efficiency.
-                    uesio.variant: uesio/crmsite.herosubtext
-        right:
-          - uesio/io.image:
-              file: uesio/crmsite.mockup_lead_convert
-              uesio.variant: uesio/crmsite.splithero
+                - uesio/crmsite.splithero:
+                    leftBackground: slate-100
+                    rightBackground: slate-50
+                    left:
+                      - uesio/io.box:
+                          uesio.variant: uesio/crmsite.textsection
+                          components:
+                            - uesio/io.text:
+                                uesio.variant: uesio/crmsite.subheader
+                                text: Prospecting
+                            - uesio/io.text:
+                                uesio.variant: uesio/crmsite.halfhero
+                                text: Qualify and deduplicate leads.
+                            - uesio/io.text:
+                                text: Take your sales game to the next level with optional AI integrations. Streamline your sales process, gain valuable insights, and boost overall efficiency.
+                                uesio.variant: uesio/crmsite.herosubtext
+                    right:
+                      - uesio/io.image:
+                          file: uesio/crmsite.mockup_lead_convert
+                          uesio.variant: uesio/crmsite.splithero
+                          uesio.styleTokens:
+                            root:
+                              - md:translate-x-1/3
+        header:
+          - uesio/core.view:
+              view: uesio/crmsite.header
               uesio.styleTokens:
                 root:
-                  - md:translate-x-1/3
+                  - sticky
+                  - z-10
+                  - top-0
+        uesio.styleTokens:
+          header:
+            - sticky
+            - z-10
+            - top-0
+        footer: []
     - uesio/crmsite.splithero:
         swap: true
         leftBackground: sky-200
