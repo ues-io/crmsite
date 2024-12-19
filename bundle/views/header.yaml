@@ -1,8 +1,7 @@
 name: header
 definition:
   # Wires connect to data in collections
-  wires:
-  # Components determine the layout and composition of your view
+  wires: # Components determine the layout and composition of your view
   components:
     - uesio/sitekit.header:
         uesio.styleTokens:
@@ -55,7 +54,11 @@ definition:
       uesio.type: uesio/io.sidepanel
       uesio.styleTokens:
         blocker:
-          - z-20
+          - z-
+        inner:
+          - from-indigo-600
+          - to-violet-600
+          - bg-gradient-to-br
         icon:
           - text-3xl
           - text-slate-800
@@ -68,19 +71,19 @@ definition:
                 - justify-center
             components:
               - uesio/io.button:
-                  uesio.variant: uesio/sitekit.secondary_dark
+                  uesio.variant: uesio/sitekit.primary_nofill
                   text: Pricing
                   signals:
                     - signal: route/NAVIGATE
                       path: pricing
               - uesio/io.button:
-                  uesio.variant: uesio/sitekit.secondary_dark
+                  uesio.variant: uesio/sitekit.primary_nofill
                   text: Documentation
                   signals:
                     - signal: route/REDIRECT
                       path: https://docs.ues.io/crm
               - uesio/io.button:
-                  uesio.variant: uesio/sitekit.secondary_dark
+                  uesio.variant: uesio/sitekit.primary_nofill
                   text: Platform
                   signals:
                     - signal: route/REDIRECT
