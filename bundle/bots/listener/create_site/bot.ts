@@ -15,24 +15,59 @@ export default function create_site(bot: ListenerBotApi) {
 		subdomain,
 	})
 
-	bot.asAdmin.runIntegrationAction("uesio/core.sendgrid", "sendemail", {
-		to: ["info@ues.io"],
-		toNames: ["ues.io"],
-		from: "info@ues.io",
-		fromName: "ues.io",
-		subject: "New CRM signup",
-		plainBody: `
-		<!DOCTYPE html>
-		<html>
-			<body>
-				Someone just started the ues.io CRM journey!<br/>
-				First Name: ${firstname}<br/>
-				Last Name: ${lastname}<br/>
-				Email: ${email}<br/>
-				Company: ${company}<br/>
-				Subdomain: ${subdomain}<br/>
-			</body>
-		</html>`,
-		contentType: "text/html",
+	const from = "info@updates.ues.io"
+
+	const nl2br = (str: string) => {
+		const breakTag = "<br>"
+		const replaceStr = "$1" + breakTag
+		return (str + "").replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, replaceStr)
+	}
+
+	const templateParams = {
+		logoUrl: bot.getHostUrl() + bot.getFileUrl("uesio/core.logo", ""),
+		logoAlt: "ues.io",
+		logoWidth: "40",
+		footerText: "ues.io - Your app platform",
+	}
+
+	const titleText = "Someone just started the ues.io CRM journey!"
+	const bodyText = `
+
+First Name: ${firstname}
+Last Name: ${lastname}
+Email: ${email}
+Company: ${company}
+Subdomain: ${subdomain}
+
+Cheers!
+
+The team at ues.io`
+
+	const notifyText = bot.mergeTemplateFile(
+		"uesio/appkit.emailtemplates",
+		"templates/genericmessage.txt",
+		{
+			titleText,
+			bodyText,
+			...templateParams,
+		}
+	)
+
+	const notifyHtml = bot.mergeTemplateFile(
+		"uesio/appkit.emailtemplates",
+		"templates/genericmessage.html",
+		{
+			titleText,
+			bodyText: nl2br(bodyText),
+			...templateParams,
+		}
+	)
+
+	bot.asAdmin.runIntegrationAction("uesio/appkit.resend", "sendemail", {
+		to: "info@ues.io",
+		from,
+		subject: "New CRM Signup",
+		html: notifyHtml,
+		text: notifyText,
 	})
 }
